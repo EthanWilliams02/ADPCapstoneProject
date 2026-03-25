@@ -27,7 +27,7 @@ public class TimeSlot {
 
 
     //Private constructor for Builder pattern.
-    public TimeSlot(Builder builder){
+    private TimeSlot(Builder builder){
         this.slotId = builder.slotId;
         this.startTime = builder.startTime;
         this.endTime = builder.endTime;
