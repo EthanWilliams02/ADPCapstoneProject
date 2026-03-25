@@ -27,7 +27,7 @@ public class Learner {
     /**
      * Constructor that initializes fields using the Builder
      */
-    public Learner(Builder builder) {
+    private Learner(Builder builder) {
         this.learnerId = builder.learnerId;
         this.learnerNumber = builder.learnerNumber;
         this.licenseType = builder.licenseType;
