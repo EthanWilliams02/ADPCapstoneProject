@@ -13,7 +13,6 @@ import za.ac.cput.util.Helper;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-
 /**
  * A factory class that handles creating TimeSlot objects,
  * making sure each one is set up correctly and ready to use.
