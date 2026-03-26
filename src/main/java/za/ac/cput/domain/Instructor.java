@@ -1,5 +1,5 @@
 /* Instructor.java
-User: model class
+Instructor model class
 Author: Qaasim Isaacs (222544422)
 Date: 25 March 2026
 */
