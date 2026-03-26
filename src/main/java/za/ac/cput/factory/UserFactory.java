@@ -5,7 +5,6 @@ import za.ac.cput.util.Helper;
 
 // Factory class to create User objects
 public class UserFactory {
-
     public static User createUser(String userId,
                                   String fullName,
                                   String username,
