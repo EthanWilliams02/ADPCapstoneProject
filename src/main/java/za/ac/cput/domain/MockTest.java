@@ -1,7 +1,7 @@
-
+/* MockTest.java  MockTest model class Author Angelo Adams (230450431) Date: 25 March 2026 */
 package za.ac.cput.domain;
 
-
+//imports
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -11,7 +11,11 @@ public class MockTest {
     private int score;
     private boolean passed;
 
+    
 //contructor
+    public MockTest{
+    }
+    //constructor arg
     private MockTest(Builder builder) {
         this.testId = builder.testId;
         this.dateTaken = builder.dateTaken;
@@ -31,7 +35,7 @@ public class MockTest {
         private LocalDate dateTaken;
         private int score;
         private boolean passed;
-
+//setters
         public Builder setTestId(int testId) {
             this.testId = testId;
             return this;
