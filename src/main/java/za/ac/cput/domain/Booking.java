@@ -1,3 +1,8 @@
+/* Booking.java
+Booking model class
+Author: Rameez Karriem (222357320)
+Date: 25 March 2026
+*/
 package za.ac.cput.domain;
 
 /**
@@ -8,16 +13,15 @@ package za.ac.cput.domain;
 public class Booking {
     private String bookingId;      // Unique identifier for the booking
     private String bookingDate;    // Date of the booking
-    private String timeSlot;       // Time slot for the booking (e.g., "09:00-10:00")
-    private String status;         // Current status of the booking (e.g., "CONFIRMED", "CANCELLED")
+    private String timeSlot;       // Time slot for the booking 
+    private String status;         // Current status of the booking
     private int learnerId;         // ID of the learner who made the booking
     private int instructorId;      // ID of the instructor assigned to the booking
 
     /**
-     * Private default constructor.
-     * Prevents direct instantiation without using the Builder.
+     * public default constructor.
      */
-    private Booking() {
+    public Booking() {
     }
 
     /**
@@ -26,7 +30,7 @@ public class Booking {
      *
      * @param builder The Builder object containing the booking data
      */
-    public Booking(Builder builder) {
+    private Booking(Builder builder) {
         this.bookingId = builder.bookingId;
         this.bookingDate = builder.bookingDate;
         this.timeSlot = builder.timeSlot;
@@ -85,23 +89,6 @@ public class Booking {
     public int getInstructorId() {
         return instructorId;
     }
-
-    /**
-     * Returns a string representation of the Booking object.
-     * @return A formatted string containing all booking details
-     */
-    @Override
-    public String toString() {
-        return "Booking{" +
-                "bookingId='" + bookingId + '\'' +
-                ", bookingDate='" + bookingDate + '\'' +
-                ", timeSlot='" + timeSlot + '\'' +
-                ", status='" + status + '\'' +
-                ", learnerId=" + learnerId +
-                ", instructorId=" + instructorId +
-                '}';
-    }
-
     /**
      * Builder class for constructing Booking objects.
      * Implements the Builder design pattern to allow flexible object creation
