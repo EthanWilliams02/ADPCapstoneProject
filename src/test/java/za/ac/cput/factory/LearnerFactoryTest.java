@@ -45,6 +45,6 @@ public class LearnerFactoryTest {
                 LocalDate.of(2025, 2, 25),  // dateRegistered
                 "U001"            // userId
         );
-        assertNotNull(learner);  // Verify learner was created even with empty field
+        assertNull(learner);  // Verify learner was NOT created (empty field should fail)
     }
 }
