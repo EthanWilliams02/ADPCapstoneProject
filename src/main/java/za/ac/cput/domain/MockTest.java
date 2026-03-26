@@ -15,7 +15,7 @@ public class MockTest {
     private boolean passed;
 
     
-//contructor
+//default contructor
     public MockTest{
     }
     //constructor arg
