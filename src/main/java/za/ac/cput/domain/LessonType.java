@@ -30,7 +30,7 @@ public class LessonType {
      *
      * @param builder The Builder object containing the lesson type data
      */
-    public LessonType(LessonType.Builder builder) {
+    private LessonType(LessonType.Builder builder) {
         this.lessonId = builder.lessonId;
         this.typeName = builder.typeName;
         this.price = builder.price;
