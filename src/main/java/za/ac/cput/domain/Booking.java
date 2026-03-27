@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class Booking {
     private String bookingId;      // Unique identifier for the booking
     private LocalDate bookingDate; // Date of the booking
-    private String timeSlot;       // Time slot for the booking (as String)
+    private String timeSlot;       // Time slot for the booking
     private String status;         // Current status of the booking
     private String learnerId;      // ID of the learner who made the booking
     private String instructorId;   // ID of the instructor assigned to the booking
