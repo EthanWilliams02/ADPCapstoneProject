@@ -1,9 +1,3 @@
-/*
- * LessonTypeFactoryTest.java
- * LessonTypeFactoryTest class
- * Author: Rameez Karriem (222357320)
- * Date: 26 March 2026
- */
 package za.ac.cput.factory;
 
 import org.junit.jupiter.api.MethodOrderer;
@@ -152,5 +146,6 @@ class LessonTypeFactoryTest {
         assertEquals("car", lessonType.getDescription());
     }
 
-
+    // Note: If you need to test User-related functionality, create a separate UserFactoryTest class
+    // The testCreateUserWithEmptyFUllName method has been removed as it belongs in UserFactoryTest
 }
