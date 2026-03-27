@@ -8,6 +8,9 @@ import za.ac.cput.domain.MockTest;
 import za.ac.cput.domain.Schedule;
 import za.ac.cput.util.Helper;
 
+//SCheduleFactory class
+ 
+ // Responsible for creating schedule objects with validation.
 public class ScheduleFactory {
 // Validate scheduleId , instructorId, vehicleId & status (must not be null or empty)
     public static Schedule createSchedule(String scheduleId, String instructorId, String vehicleId, String status ){
