@@ -57,6 +57,10 @@ public class Schedule {
             return this;
         }
 
+        /**
+         * Copies values from an existing Schedule object to the Builder.
+         * This method is used for creating modified copies of existing schedule types.
+        */
         public Builder copy(Schedule schedule) {
             this.scheduleId = schedule.scheduleId;
             this.instructorId = schedule.instructorId;
