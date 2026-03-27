@@ -1,7 +1,7 @@
 /* Schedule.java  
 Schedule model class 
 Author Angelo Adams (230450431) 
-Date: 04 March 2026 */
+Date: 25 March 2026 */
 package za.ac.cput.domain;
 
 import java.time.LocalDate;
