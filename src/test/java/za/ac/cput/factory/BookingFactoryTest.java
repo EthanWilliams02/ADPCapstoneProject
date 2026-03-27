@@ -14,7 +14,6 @@ import za.ac.cput.domain.Booking;
 import za.ac.cput.domain.User;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -24,9 +23,9 @@ class BookingFactoryTest {
     @Test
     @Order(1)
     void createBooking() {
-        // Create LocalDate and LocalTime objects
+        // Create LocalDate and timeSlot as String
         LocalDate bookingDate = LocalDate.of(2026, 12, 25);
-        LocalTime timeSlot = LocalTime.of(7, 0);
+        String timeSlot = "07:00";
 
         Booking booking = BookingFactory.createBooking(
                 "222357320",
@@ -44,7 +43,7 @@ class BookingFactoryTest {
     @Order(2)
     void testCreateBookingWithEmptyFields() {
         LocalDate bookingDate = LocalDate.of(2026, 12, 25);
-        LocalTime timeSlot = LocalTime.of(7, 0);
+        String timeSlot = "07:00";
 
         // Test with empty bookingId
         Booking booking1 = BookingFactory.createBooking(
@@ -57,8 +56,19 @@ class BookingFactoryTest {
         );
         assertNull(booking1); // pass if bookingId is empty/null
 
-        // Test with empty status
+        // Test with empty timeSlot
         Booking booking2 = BookingFactory.createBooking(
+                "222357320",
+                bookingDate,
+                "", // empty timeSlot
+                "accepted",
+                "22355674",
+                "555666999"
+        );
+        assertNull(booking2); // pass if timeSlot is empty/null
+
+        // Test with empty status
+        Booking booking3 = BookingFactory.createBooking(
                 "222357320",
                 bookingDate,
                 timeSlot,
@@ -66,10 +76,10 @@ class BookingFactoryTest {
                 "22355674",
                 "555666999"
         );
-        assertNull(booking2); // pass if status is empty/null
+        assertNull(booking3); // pass if status is empty/null
 
         // Test with empty learnerId
-        Booking booking3 = BookingFactory.createBooking(
+        Booking booking4 = BookingFactory.createBooking(
                 "222357320",
                 bookingDate,
                 timeSlot,
@@ -77,10 +87,10 @@ class BookingFactoryTest {
                 "", // empty learnerId
                 "555666999"
         );
-        assertNull(booking3); // pass if learnerId is empty/null
+        assertNull(booking4); // pass if learnerId is empty/null
 
         // Test with empty instructorId
-        Booking booking4 = BookingFactory.createBooking(
+        Booking booking5 = BookingFactory.createBooking(
                 "222357320",
                 bookingDate,
                 timeSlot,
@@ -88,13 +98,13 @@ class BookingFactoryTest {
                 "22355674",
                 "" // empty instructorId
         );
-        assertNull(booking4); // pass if instructorId is empty/null
+        assertNull(booking5); // pass if instructorId is empty/null
     }
 
     @Test
     @Order(3)
     void testCreateBookingWithNullBookingDate() {
-        LocalTime timeSlot = LocalTime.of(7, 0);
+        String timeSlot = "07:00";
 
         Booking booking = BookingFactory.createBooking(
                 "222357320",
@@ -129,7 +139,7 @@ class BookingFactoryTest {
     @Order(5)
     void testCreateBookingWithAllValidFields() {
         LocalDate bookingDate = LocalDate.of(2026, 12, 25);
-        LocalTime timeSlot = LocalTime.of(7, 0);
+        String timeSlot = "07:00";
 
         Booking booking = BookingFactory.createBooking(
                 "222357320",
