@@ -6,7 +6,7 @@ import za.ac.cput.util.Helper;
 
 public class ScheduleFactory {
 
-    public static Schedule createMockTest(String scheduleId, String instructorId, String vehicleId, String status ){
+    public static Schedule createSchedule(String scheduleId, String instructorId, String vehicleId, String status ){
 
         if (Helper.isNullOrEmpty(scheduleId)) {
             return null;
