@@ -25,6 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
     public class ScheduleFactoryTest {
 
 
+
         // Test 1: Create a valid schedule with all fields
         @Test
         @Order(1)  // Runs first

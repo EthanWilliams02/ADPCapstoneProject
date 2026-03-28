@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AdminRepositoryTest {
 
     // Get singleton instance of repository
-    private AdminRepository adminRepository = AdminRepository.getRepository();
+    private final AdminRepository adminRepository = AdminRepository.getRepository();
 
     // Helper method to create a sample admin
     private Admin createAdmin() {

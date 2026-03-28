@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class LearnerRepositoryTest {
 
     // Get singleton instance of repository
-    private LearnerRepository learnerRepository = LearnerRepository.getRepository();
+    private final LearnerRepository learnerRepository = LearnerRepository.getRepository();
 
     // Helper method to create a sample learner
     private Learner createLearner(){

@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TimeSlotRepositoryTest {
 
     // Get singleton instance of repository
-    private TimeSlotRepository timeSlotRepository = TimeSlotRepository.getRepository();
+    private final TimeSlotRepository timeSlotRepository = TimeSlotRepository.getRepository();
 
     // Helper method to create a sample time slot
     private TimeSlot createTimeSlot() {

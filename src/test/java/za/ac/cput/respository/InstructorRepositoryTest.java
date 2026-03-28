@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class InstructorRepositoryTest {
 
     // Get singleton instance of repository
-    private InstructorRepository instructorRepository = InstructorRepository.getRepository();
+    private final InstructorRepository instructorRepository = InstructorRepository.getRepository();
 
     // Helper method to create a sample instructor
     private Instructor createInstructor() {

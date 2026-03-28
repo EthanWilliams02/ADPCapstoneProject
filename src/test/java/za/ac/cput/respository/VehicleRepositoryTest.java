@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class VehicleRepositoryTest {
 
     // Get singleton instance of repository
-    private VehicleRepository vehicleRepository = VehicleRepository.getRepository();
+    private final VehicleRepository vehicleRepository = VehicleRepository.getRepository();
 
     // Helper method to create a sample vehicle
     private Vehicle createVehicle() {

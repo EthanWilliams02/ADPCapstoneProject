@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class UserRepositoryTest {
 
     // Get singleton instance of repository
-    private UserRepository userRepository = UserRepository.getRepository();
+    private final UserRepository userRepository = UserRepository.getRepository();
 
     // Helper method to create a sample user
     private User createUser() {
